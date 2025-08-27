@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#121826">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculo boleta de honorario"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Campo de entrada -->
+    <EditText
+        android:id="@+id/montoInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el monto en Pesos Chilenos"
+        android:inputType="number"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#0F0F14"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón Calcular -->
+    <Button
+        android:id="@+id/calcularButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:backgroundTint="#3949AB"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Resultados ocultos hasta calcular -->
+    <LinearLayout
+        android:id="@+id/resultadosLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2"
+        android:gravity="center">
+
+        <!-- Bloque Valor Líquido -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor Líquido"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/boletaLiquido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monto de la Boleta: $0"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/recibirLiquido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monto a Recibir: $0"
+                android:textColor="#448AFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/retencionLiquido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IVA (19%): $0"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <!-- Bloque Valor Bruto -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor Bruto"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/boletaBruto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monto de la Boleta: $0"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/recibirBruto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monto a Recibir: $0"
+                android:textColor="#448AFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/retencionBruto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IVA (19%): $0"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
