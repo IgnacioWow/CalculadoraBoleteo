@@ -44,20 +44,23 @@
         android:id="@+id/resultadosLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:visibility="gone"
-        android:weightSum="2"
+        android:padding="12dp"
         android:gravity="center">
 
         <!-- Bloque Valor Líquido -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="1"
-            android:padding="12dp"
+            android:minHeight="120dp"
+            android:padding="16dp"
             android:background="@android:drawable/dialog_holo_light_frame"
-            android:layout_marginEnd="8dp">
+            android:layout_marginEnd="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -93,13 +96,15 @@
 
         <!-- Bloque Valor Bruto -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="1"
-            android:padding="12dp"
+            android:minHeight="120dp"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp"
             android:background="@android:drawable/dialog_holo_light_frame"
-            android:layout_marginStart="8dp">
+            android:layout_marginHorizontal="16dp"
+            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -134,5 +139,20 @@
         </LinearLayout>
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desarrollado por Ignacio Williams"
+        android:textAlignment="center"
+        android:padding="12dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:background="#202020" />
 
 </LinearLayout>
+
